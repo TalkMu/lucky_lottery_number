@@ -10,11 +10,26 @@
 <script>
 import "./index.scss";
 import Taro, { Events } from '@tarojs/taro'
+import {formatDate, randomNum} from "../../helper";
 export default {
   data() {
     return {
       msg: "Hello world!",
     };
+  },
+  onLoad() {
+    Taro.request({
+      url: 'https://www.kxindian.com/json/lucky_lottery_number/env.json',
+      method:"get",
+      success: function (res) {
+        const data = res.data;
+        if (data.hasPushEnv){
+          Taro.navigateTo({
+            url: '/pages/push/index',
+          })
+        }
+      }
+    })
   },
   methods:{
     toK8(){

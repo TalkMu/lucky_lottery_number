@@ -1,7 +1,8 @@
 export default defineAppConfig({
   pages: [
-    'pages/k8/index',
     'pages/index/index',
+    'pages/k8/index',
+    'pages/push/index',
     'pages/twoColorBall/index',
   ],
   window: {
