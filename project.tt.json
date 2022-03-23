@@ -1,0 +1,9 @@
+{
+  "miniprogramRoot": "./",
+  "projectname": "lucky_lottery_number",
+  "appid": "testAppId",
+  "setting": {
+    "es6": false,
+    "minified": false
+  }
+}

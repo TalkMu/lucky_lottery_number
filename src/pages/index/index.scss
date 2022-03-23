@@ -1,0 +1,55 @@
+.container {
+  position:fixed;
+  top: 0;
+  left: 0;
+  background: url("../../assets/img/k8.png") no-repeat;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+
+  .title-container {
+    position: relative;
+    top: 220px;
+    text-align: center;
+
+    text {
+      display: block;
+      color: white;
+    }
+
+    .title {
+      font-weight: 500;
+      font-size: 40px;
+      letter-spacing: 2px
+    }
+
+    .detail {
+      margin-top: 30px;
+      font-size: 20px;
+      letter-spacing: 2px
+    }
+  }
+
+  .number-container {
+    border: 1px solid black;
+    position: absolute;
+    height: 42%;
+    width: 65%;
+    text-align: center;
+    left: 17.5%;
+    top: 40%;
+    .number-item{
+      .title{
+        color: black;
+        font-size: 24px;
+      }
+      .number{
+        margin: 0 2px;
+        color: dodgerblue;
+        font-size: 22px;
+      }
+    }
+  }
+}
