@@ -9,5 +9,4 @@ const App = {
     return h('block', this.$slots.default)
   }
 }
-
 export default App

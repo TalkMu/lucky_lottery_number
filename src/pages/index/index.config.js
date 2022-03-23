@@ -1,3 +1,3 @@
 export default definePageConfig({
-  navigationBarTitleText: '快8生肖'
+  navigationBarTitleText: '幸运生肖'
 })

@@ -1,39 +1,33 @@
 <template>
   <view class="container">
-    <view class="title-container">
-      <text class="title">第2022023期</text>
-      <text class="title">吉祥号值得来一套</text>
-      <view class="detail">
-        <text>每周二、四、日开奖</text>
-        <text>20:00 停售，21:15 开奖</text>
-      </view>
-    </view>
-    <view class="number-container">
-      <view class="number-item" v-for="n in 12">
-        <text class="title">虎虎生威:</text>
-        <text class="number">12</text>
-        <text class="number">12</text>
-        <text class="number">12</text>
-        <text class="number">12</text>
-        <text class="number">12</text>
-        <text class="number">12</text>
-        <text class="number">12</text>
-        <text class="number">12</text>
-        <text class="number">12</text>
-        <text class="number">12</text>
-      </view>
+    <view class="btn-container">
+      <button type="primary" @tap="toK8">快乐8生肖</button>
+      <button type="primary" @tap="toTwoColorBall">双色球生肖</button>
     </view>
   </view>
 </template>
 
 <script>
 import "./index.scss";
-
+import Taro, { Events } from '@tarojs/taro'
 export default {
   data() {
     return {
       msg: "Hello world!",
     };
   },
+  methods:{
+    toK8(){
+      Taro.navigateTo({
+        url: '/pages/k8/index',
+      })
+    },
+    toTwoColorBall(){
+      Taro.navigateTo({
+        url: '/pages/twoColorBall/index',
+      })
+    }
+
+  }
 };
 </script>
