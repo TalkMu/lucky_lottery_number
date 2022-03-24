@@ -77,11 +77,12 @@
   .btn-container{
     width: 100%;
     position: fixed;
-    bottom: 20px;
+    bottom: 45px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     button{
+      width: 350px;
       background-color: red;
       color: orange;
     }

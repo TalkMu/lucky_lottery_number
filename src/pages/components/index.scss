@@ -1,0 +1,12 @@
+.btn-container{
+  width: 100%;
+  position: fixed;
+  bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  button{
+    background-color: red;
+    color: orange;
+  }
+}

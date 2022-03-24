@@ -1,5 +1,6 @@
 <template>
   <view class="container">
+    <ad unit-id="adunit-a970ece15ac3e27f" ad-type="video" ad-theme="white"></ad>
     <view class="btn-container">
       <button type="primary" @tap="toPush" v-if="hasPushEnv">生肖幸运</button>
       <button type="primary" @tap="toK8" v-if="!hasPushEnv">快乐8生肖</button>
@@ -26,6 +27,7 @@ export default {
       method:"get",
       success: function (res) {
         const data = res.data;
+        // const data = false;
         that.hasPushEnv = data.hasPushEnv;
       }
     })
@@ -47,6 +49,18 @@ export default {
       })
     }
 
+  },
+  onShareTimeline () {
+    return {
+      title: "快8生肖、幸运号码、幸运生肖选号",
+      imageUrl:"",
+    }
+  },
+  onShareAppMessage (res) {
+    return {
+      title: '生肖幸运号码',
+      path: '/pages/index/index'
+    }
   }
 };
 </script>

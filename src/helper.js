@@ -12,6 +12,32 @@ export function randomNum(minNum,maxNum){
   }
 }
 
+export function getWeek(){
+  const a = new Array("日", "一", "二", "三", "四", "五", "六");
+  const week = new Date().getDay();
+  const str = "星期" + a[week];
+  return str;
+}
+
+export function randomNumStr(minNum,maxNum){
+  let num;
+  switch(arguments.length){
+    case 1:
+      num = parseInt(Math.random()*minNum+1,10);
+      break;
+    case 2:
+      num = parseInt(Math.random()*(maxNum-minNum+1)+minNum,10);
+      break;
+    default:
+      return 0;
+      break;
+  }
+  if (num < 10) {
+    num = "0" + num
+  }
+  return num;
+}
+
 /**
  * 格式化日期
  * @param time    Date/String/Number
